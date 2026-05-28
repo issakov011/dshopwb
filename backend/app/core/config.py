@@ -1,8 +1,10 @@
-from pydantic import BaseSettings
+from pydantic_settings import BaseSettings, SettingsConfigDict
 from typing import Optional
 
 
 class Settings(BaseSettings):
+    model_config = SettingsConfigDict(env_file="../../.env", env_file_encoding="utf-8")
+
     # Database
     DATABASE_URL: str = "postgresql://postgres:postgres@db:5432/dshop"
 
@@ -18,13 +20,9 @@ class Settings(BaseSettings):
     # Al-Style.kz
     ALSTYLE_TOKEN: Optional[str] = None
     ALSTYLE_BASE_URL: str = "https://api.al-style.kz"
-    ALSTYLE_TIMEOUT: int = 30          # секунды на один запрос
-    ALSTYLE_PAGE_SIZE: int = 100       # товаров на страницу
-    ALSTYLE_DOWNLOAD_IMAGES: bool = False  # скачивать изображения локально
-
-    class Config:
-        env_file = "../../.env"
-        env_file_encoding = "utf-8"
+    ALSTYLE_TIMEOUT: int = 30
+    ALSTYLE_PAGE_SIZE: int = 100
+    ALSTYLE_DOWNLOAD_IMAGES: bool = False
 
 
 settings = Settings()
