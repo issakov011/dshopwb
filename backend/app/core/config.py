@@ -19,7 +19,7 @@ class Settings(BaseSettings):
 
     # Al-Style.kz
     ALSTYLE_TOKEN: Optional[str] = None
-    ALSTYLE_BASE_URL: str = "https://api.al-style.kz"
+    ALSTYLE_BASE_URL: str = "https://api.al-style.kz/api"
     ALSTYLE_TIMEOUT: int = 30
     ALSTYLE_PAGE_SIZE: int = 100
     ALSTYLE_DOWNLOAD_IMAGES: bool = False

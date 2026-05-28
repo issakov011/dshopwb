@@ -11,7 +11,6 @@ Endpoints:
   GET  /api/alstyle/products/{id}   — детали товара
 """
 
-import asyncio
 import logging
 from typing import Any, Dict, List, Optional
 
@@ -61,7 +60,7 @@ async def _run_sync_task(mode: str) -> None:
             else:
                 await svc.sync_all()
 
-            _sync_state["stats"]   = svc.stats.dict()
+            _sync_state["stats"]   = svc.stats.model_dump()
             _sync_state["status"]  = "done"
             _sync_state["message"] = "Завершено успешно"
 

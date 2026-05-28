@@ -28,12 +28,12 @@ logger = logging.getLogger(__name__)
 
 
 # ── Endpoint-ы ──────────────────────────────────────────────────────────────────
+# Пути относительно ALSTYLE_BASE_URL (https://api.al-style.kz/api)
 ENDPOINTS = {
-    "categories":      "/api/categories",
-    "products":        "/products",
-    # Если API имеет отдельный endpoint для характеристик/изображений — добавь сюда:
-    # "product_detail":  "/products/{product_id}",
-    # "stocks":          "/api/stocks",
+    "categories":    "/categories",
+    "products":      "/products",
+    # "product_detail": "/products/{product_id}",
+    # "stocks":         "/stocks",
 }
 
 # Параметры пагинации (имена query-параметров могут отличаться у разных версий API)
