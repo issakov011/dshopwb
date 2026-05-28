@@ -1,0 +1,197 @@
+# ═══════════════════════════════════════════════════════
+# СЕКРЕТЫ И КОНФИГУРАЦИЯ (никогда не коммитить!)
+# ═══════════════════════════════════════════════════════
+.env
+.env.local
+.env.*.local
+.env.production
+.env.staging
+
+# ═══════════════════════════════════════════════════════
+# PYTHON
+# ═══════════════════════════════════════════════════════
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Виртуальные окружения
+env/
+venv/
+.venv/
+ENV/
+env.bak/
+venv.bak/
+.python-version
+
+# Дистрибутивы / пакеты
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Тесты и покрытие
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+profile_default/
+ipython_config.py
+
+# mypy / pyright
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+.pytype/
+
+# ═══════════════════════════════════════════════════════
+# NODE / FRONTEND
+# ═══════════════════════════════════════════════════════
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+.npm
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
+# Сборка React
+frontend/build/
+frontend/dist/
+.next/
+.nuxt/
+.output/
+
+# ═══════════════════════════════════════════════════════
+# БАЗА ДАННЫХ
+# ═══════════════════════════════════════════════════════
+*.sqlite3
+*.sqlite
+*.db
+*.sql.bak
+
+# ═══════════════════════════════════════════════════════
+# DOCKER
+# ═══════════════════════════════════════════════════════
+# НЕ игнорируем docker-compose.yml и Dockerfile — они нужны
+# Игнорируем только override-файлы с секретами
+docker-compose.override.yml
+docker-compose.prod.yml
+
+# ═══════════════════════════════════════════════════════
+# МЕДИАФАЙЛЫ / ЗАГРУЗКИ
+# ═══════════════════════════════════════════════════════
+backend/app/media/
+media/
+uploads/
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.webp
+# Исключение: изображения в документации оставляем
+!docs/**/*.png
+!docs/**/*.jpg
+
+# ═══════════════════════════════════════════════════════
+# ЛОГИ
+# ═══════════════════════════════════════════════════════
+*.log
+logs/
+log/
+
+# ═══════════════════════════════════════════════════════
+# IDE И РЕДАКТОРЫ
+# ═══════════════════════════════════════════════════════
+.vscode/
+!.vscode/extensions.json
+!.vscode/settings.json.example
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+
+# ═══════════════════════════════════════════════════════
+# ОС
+# ═══════════════════════════════════════════════════════
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ═══════════════════════════════════════════════════════
+# ВРЕМЕННЫЕ ФАЙЛЫ
+# ═══════════════════════════════════════════════════════
+*.tmp
+*.temp
+*.bak
+*.backup
+*.orig
+tmp/
+temp/
+
+# ═══════════════════════════════════════════════════════
+# SSL / СЕРТИФИКАТЫ
+# ═══════════════════════════════════════════════════════
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+certs/
+ssl/
+
+# ═══════════════════════════════════════════════════════
+# ALEMBIC
+# ═══════════════════════════════════════════════════════
+# Папку alembic/versions коммитим — это миграции
+# НЕ игнорируем alembic/
+
+# ═══════════════════════════════════════════════════════
+# ПРОЧЕЕ
+# ═══════════════════════════════════════════════════════
+.claude/
+*.pyc
+.pytest_cache/
